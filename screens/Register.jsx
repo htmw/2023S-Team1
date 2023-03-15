@@ -1,11 +1,14 @@
-import { View, Text } from 'react-native'
+import { View, Text,SafeAreaView } from 'react-native'
 import React from 'react'
-import { SafeAreaView } from 'react-native-safe-area-context'
+import { useNavigation } from '@react-navigation/native';
 
 const Register = () => {
   return (
     <SafeAreaView>
+      <View className="flex-1 items-center justify-center">
       <Text>Register</Text>
+      </View>
+
     </SafeAreaView>
   )
 }
