@@ -14,7 +14,7 @@ const OnboardingScreen = () => {
       onDone={()=> navigation.replace("Login")}
       pages={[
         {
-          backgroundColor: 'rgb(14 165 233)',
+          backgroundColor: '#5295ad',
           image: <Image source={require('../images/onboarding_1.png')} className="w-64 h-64 object-contain" />,
           title: 'Welcome to CovSP!',
           subtitle: 'CovSP (Covid Safety Protocol) Help stop the spread by updating your data. When outside the home, stay at least six feet away from other people, and avoid groups',
@@ -22,7 +22,7 @@ const OnboardingScreen = () => {
           subTitleStyles:{color:'white',fontSize:17,textAlign:'justify'}
         },
         {
-            backgroundColor: 'rgb(14 165 233)',
+            backgroundColor: '#5295ad',
             image: <Image source={require('../images/onboarding_2.png')} className="w-64 h-64 object-contain"/>,
             title: 'How does it works?',
             subtitle: 'CovSP uses Data of your contacts and loved ones has the app installed. using the data App warns you when effected person is update their status in the app',
