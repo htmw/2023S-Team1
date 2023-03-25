@@ -11,13 +11,16 @@ import { theme } from '../core/theme'
 import { emailValidator } from '../helpers/emailValidator'
 import { passwordValidator } from '../helpers/passwordValidator'
 import { nameValidator } from '../helpers/nameValidator'
+import { signInWithEmailAndPassword,createUserWithEmailAndPassword } from 'firebase/auth';
+import { auth } from '../firebase';
 
-export default function RegisterScreen({ navigation }) {
+export default function Register({ navigation }) {
   const [name, setName] = useState({ value: '', error: '' })
   const [email, setEmail] = useState({ value: '', error: '' })
   const [password, setPassword] = useState({ value: '', error: '' })
 
   const onSignUpPressed = () => {
+
     const nameError = nameValidator(name.value)
     const emailError = emailValidator(email.value)
     const passwordError = passwordValidator(password.value)
@@ -27,10 +30,20 @@ export default function RegisterScreen({ navigation }) {
       setPassword({ ...password, error: passwordError })
       return
     }
-    navigation.reset({
+    createUserWithEmailAndPassword(auth,email.value,password.value)
+    .then(() => {
+      alert('Yayy! Your Account Registered Successfully! Go back to Login');
+    })
+    .catch(error => {
+      if (error.code === 'auth/email-already-in-use') {
+        alert('Email address is already in use!');
+      }
+      console.error(error);
+    });
+    /*navigation.reset({
       index: 0,
       routes: [{ name: 'Home' }],
-    })
+    })*/
   }
 
   return (
