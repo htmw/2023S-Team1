@@ -15,21 +15,22 @@ const OnboardingScreen = () => {
       pages={[
         {
           backgroundColor: 'rgb(14 165 233)',
-          image: <Image source={require('../images/onboarding_1.png')} className="w-80 h-80 object-contain" />,
+          image: <Image source={require('../images/onboarding_1.png')} className="w-64 h-64 object-contain" />,
           title: 'Welcome to CovSP!',
-          subtitle: 'Help stop the spread by turning Bluetooth on. When outside the home, stay at least six feet away from other people, and avoid groups',
+          subtitle: 'CovSP (Covid Safety Protocol) Help stop the spread by updating your data. When outside the home, stay at least six feet away from other people, and avoid groups',
           titleStyles:{color:'white',fontSize:30},
-          subTitleStyles:{color:'white',fontSize:20, fontStyle: 'italic'}
+          subTitleStyles:{color:'white',fontSize:17,textAlign:'justify'}
         },
         {
             backgroundColor: 'rgb(14 165 233)',
-            image: <Image source={require('../images/onboarding_2.png')} className="w-80 h-80 object-contain"/>,
+            image: <Image source={require('../images/onboarding_2.png')} className="w-64 h-64 object-contain"/>,
             title: 'How does it works?',
-            subtitle: 'CovSP uses Bluetooth signals to determine when your phone is near another phone that also has the app installed.',
-            titleStyles:{color:'white',fontSize:30,fontStyle: 'italic'},
-            subTitleStyles:{color:'white',fontSize:20, fontStyle: 'italic'}
+            subtitle: 'CovSP uses Data of your contacts and loved ones has the app installed. using the data App warns you when effected person is update their status in the app',
+            titleStyles:{color:'white',fontSize:30},
+            subTitleStyles:{color:'white',fontSize:17,textAlign:'justify'}
           },
       ]}
+      
     />
   )
 }

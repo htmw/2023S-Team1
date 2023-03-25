@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "144802218625",
+    "project_id": "covsp-7477f",
+    "storage_bucket": "covsp-7477f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:144802218625:android:2a6cfe815960eeed854380",
+        "android_client_info": {
+          "package_name": "com.anonymous.CovSP"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "144802218625-afugteh26d1lmaa5tsmnjrh3uddprba8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.anonymous.CovSP",
+            "certificate_hash": "6ab224beccffc649542d72be3558990250a227e2"
+          }
+        },
+        {
+          "client_id": "144802218625-13lqa62pbl8c2i0n0ugh4bqlkjfhtn83.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFf0x8mLgQKPVn51ZfEL3VgKP08GI5MrU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "144802218625-13lqa62pbl8c2i0n0ugh4bqlkjfhtn83.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
