@@ -11,7 +11,7 @@ import { theme } from '../core/theme'
 import { emailValidator } from '../helpers/emailValidator'
 import { passwordValidator } from '../helpers/passwordValidator'
 import { nameValidator } from '../helpers/nameValidator'
-import { signInWithEmailAndPassword,createUserWithEmailAndPassword } from 'firebase/auth';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../firebase';
 
 export default function Register({ navigation }) {
@@ -32,7 +32,10 @@ export default function Register({ navigation }) {
     }
     createUserWithEmailAndPassword(auth,email.value,password.value)
     .then(() => {
-      alert('Yayy! Your Account Registered Successfully! Go back to Login');
+      navigation.reset({
+        index: 0,
+        routes: [{ name: 'Login' }],
+      })
     })
     .catch(error => {
       if (error.code === 'auth/email-already-in-use') {
@@ -40,10 +43,6 @@ export default function Register({ navigation }) {
       }
       console.error(error);
     });
-    /*navigation.reset({
-      index: 0,
-      routes: [{ name: 'Home' }],
-    })*/
   }
 
   return (

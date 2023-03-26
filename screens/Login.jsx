@@ -8,6 +8,8 @@ import TextInput from '../components/TextInput'
 import { theme } from '../core/theme'
 import { emailValidator } from '../helpers/emailValidator'
 import { passwordValidator } from '../helpers/passwordValidator'
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import { auth } from '../firebase';
 
 
 export default function LoginScreen({ navigation }) {
@@ -22,10 +24,16 @@ export default function LoginScreen({ navigation }) {
       setPassword({ ...password, error: passwordError })
       return
     }
-    navigation.reset({
-      index: 0,
-      routes: [{ name: 'Dashboard' }],
-    })
+    signInWithEmailAndPassword(auth,email.value,password.value)
+    .then(() => {
+        navigation.reset({ index: 0, routes: [{ name: 'Home' }],})
+      })
+      .catch(error => {
+        if (error.code === 'auth/invalid-email') {
+          console.log('That email address is invalid!');
+        }
+        console.error(error);
+      });
   }
 
   return (
