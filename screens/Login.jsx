@@ -26,7 +26,7 @@ export default function LoginScreen({ navigation }) {
     }
     signInWithEmailAndPassword(auth,email.value,password.value)
     .then(() => {
-        navigation.reset({ index: 0, routes: [{ name: 'Home' }],})
+        navigation.reset({ index: 0, routes: [{ name: 'Dashboard' }],})
       })
       .catch(error => {
         if (error.code === 'auth/invalid-email') {
