@@ -1,11 +1,13 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import React, { useState } from 'react'
+import { TouchableOpacity, StyleSheet, View,Image } from 'react-native'
+import Background from '../../components/Background'
+
 
 const Friends = () => {
   return (
-    <View>
-      <Text>Friends</Text>
-    </View>
+    <Background>
+      <Image source={require('../../images/friends.png')} className="w-64 h-64 object-contain"/>
+    </Background>
   )
 }
 

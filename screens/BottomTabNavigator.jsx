@@ -6,6 +6,7 @@ import Home from "./BottomNavigator/Home";
 import Bluetooth from  "./BottomNavigator/Bluetooth";
 import Friends from  "./BottomNavigator/Friends";
 import Settings from  "./BottomNavigator/Settings";
+import Notifications from  "./BottomNavigator/Notifications";
 
 const Tab = createBottomTabNavigator();
 
@@ -25,16 +26,19 @@ function BottomTabNavigator() {
           else if(route.name === "Bluetooth"){
             iconName = focused ? 'bluetooth' : 'bluetooth-outline';
           }
+          else if(route.name === "Notifications"){
+            iconName = focused ? 'md-notifications' : 'md-notifications-outline';
+          }
           else if(route.name === "Settings"){
             iconName = focused ? 'settings' : 'settings-outline';
           } 
-          return <Icon name={iconName} size={32} color={color}/>    
-                       
+          return <Icon name={iconName} size={32} color={color} />                
         },
       })}>
         <Tab.Screen name="Home" component={Home} />
         <Tab.Screen name="Friends" component={Friends} />
         <Tab.Screen name="Bluetooth" component={Bluetooth} />
+        <Tab.Screen name="Notifications" component={Notifications} />
         <Tab.Screen name="Settings" component={Settings} />
       </Tab.Navigator>
     );

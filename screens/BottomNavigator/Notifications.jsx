@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { TouchableOpacity, StyleSheet, View } from 'react-native'
 import Background from '../../components/Background'
 
-const Bluetooth = () => {
+const Notifications = () => {
   return (
     <Background>
       
@@ -10,4 +10,4 @@ const Bluetooth = () => {
   )
 }
 
-export default Bluetooth
+export default Notifications

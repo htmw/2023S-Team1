@@ -1,12 +1,20 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import React, { useState } from 'react'
+import { TouchableOpacity, StyleSheet, View } from 'react-native'
+import Background from '../../components/Background'
+import Button from '../../components/Button'
+import Logo from '../../components/Logo'
+import { signOut } from 'firebase/auth';
+import { auth } from '../../firebase';
 
-const Settings = () => {
+
+export default function Settings({ navigation }){
   return (
-    <View>
-      <Text>Settings</Text>
-    </View>
+    <Background>
+      <Logo />
+      <Button mode="contained" onPress={() => navigation.replace('Login')}>
+        Logout
+      </Button>
+    </Background>
   )
 }
 
-export default Settings
