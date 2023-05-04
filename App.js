@@ -4,7 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NativeWindStyleSheet } from 'nativewind';
 import auth from '@react-native-firebase/auth';
-
+ 
 //import Screens
 import OnboardingScreen from './screens/authentication/Onboarding';
 import LoginScreen from './screens/authentication/Login';
